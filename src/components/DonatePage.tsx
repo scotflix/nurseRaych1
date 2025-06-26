@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Heart, Droplets, BookOpen, Bus, HeartHandshake, Play, Users, TrendingUp, Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import  { useState, useEffect, useRef } from 'react';
+import { Heart, Droplets, BookOpen, Bus, HeartHandshake, Play, Users,  Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const donationTiers = [
   {

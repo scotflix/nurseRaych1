@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, } from 'react';
 import { Navigation } from './Navigation';
 import { 
   CreditCard, 
   Smartphone, 
   Shield, 
-  Globe, 
   Heart, 
   CheckCircle, 
   ArrowLeft, 
-  Star,
   Lock,
   Zap,
   Users,
@@ -91,7 +89,7 @@ export function DonationCheckoutPage() {
   const [userLocation, setUserLocation] = useState('US');
   const [donorInfo, setDonorInfo] = useState({ name: '', email: '', phone: '' });
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+   //const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setIsVisible(true);

@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, } from 'react';
 import { Navigation } from './Navigation';
 import { 
   Heart, 
-  Users, 
   BookOpen, 
   DollarSign, 
   Wrench, 
@@ -10,9 +9,7 @@ import {
   CheckCircle, 
   Share2, 
   Download, 
-  Star,
   MessageCircle,
-  Globe,
   Clock,
   Award,
   Send,
@@ -21,15 +18,10 @@ import {
   Copy,
   Sparkles,
   Target,
-  Zap,
   Trophy,
-  Mail,
-  Phone,
   MapPin,
   User,
-  Calendar,
   ChevronRight,
-  Play,
   X
 } from 'lucide-react';
 
@@ -93,19 +85,14 @@ const quizQuestions = [
 export function JoinCampaignPage() {
   const [currentScreen, setCurrentScreen] = useState('confirmation'); // confirmation, onboarding, quiz, result, email, share, certificate
   const [selectedRole, setSelectedRole] = useState('');
-  const [userName, setUserName] = useState('Friend');
+  const [userName] = useState('Friend');
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
   const [currentQuizQuestion, setCurrentQuizQuestion] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [userInfo, setUserInfo] = useState({ name: '', email: '', whatsapp: '' });
   const [showConfetti, setShowConfetti] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+  // All component declarations (ConfirmationModal, OnboardingFlow, etc.) should be defined here, not inside useEffect.
   const ConfirmationModal = () => (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-10">
       <div className="fixed inset-0 bg-gradient-to-br from-purple-500/80 via-pink-500/60 to-cyan-500/80  overflow-auto">
@@ -187,7 +174,7 @@ export function JoinCampaignPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {roleCards.map((role, index) => {
+          {roleCards.map((role) => {
             const Icon = role.icon;
             return (
               <div

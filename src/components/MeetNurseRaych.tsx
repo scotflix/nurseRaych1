@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import { Mail, Send, CheckCircle, Heart, Users, BookOpen, Brain, HelpingHand } from 'lucide-react';
 
 const topTips = [

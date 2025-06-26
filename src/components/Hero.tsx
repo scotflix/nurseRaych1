@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowDown, Heart, Users, Award, ChevronDown } from 'lucide-react';
+import  { useState, useEffect } from 'react';
+import {  Heart, Users, Award, ChevronDown } from 'lucide-react';
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false);
