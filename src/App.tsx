@@ -37,7 +37,7 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
+    <Router  basename="/nurseRaych1"> {/* Ensure the basename matches your repo name */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/join-campaign" element={<JoinCampaignPage />} />
